@@ -1,0 +1,14 @@
+between - 이상 이하
+nvl(인수1,인수2) - 인수1이 null 이면 인수2 반환 null이 아닐 경우 인수 1 반환 (보류)
+nullif(인수1, 인수2) - 인수1,2 같으면 null, 아니면 1 
+coalesce - null 아닌 최초의 인수 반환
+natural 조인 앞에 식별자 X
+sign - 양수면 1 음수면 -1 0이면 0
+concat - 문자열 합치기
+replace - 문자열 변환
+조건절 - and 가 or 보다 우선
+round - 지정된 소수점 자릿수까지 반올림
+floor - 소수점 이하 수 버림
+ceil - 소수점 이하의 수 반올림
+trunc - 지정된 소수점 자릿수까지 버리고 반환, 명시X = 기본값 0
+abs - 절대값 반환
