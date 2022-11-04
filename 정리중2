@@ -1,0 +1,33 @@
+row_number - 1,2,3,4,5
+rank - 1,2,3,3,5
+dense_rank - 1,2,3,3,4
+
+intersect - 교집합
+union all - 합집합(중복 포함) / union - 합집합(중복제외)
+minus - 차집합
+
+first_value - 파티션에서 가장 처음 나오는 데이터 반환
+last_value - 파티션에서 가장 마지막에 나오는 데이터 반환
+lead - 파티션에서 특정 수만큼 뒤에 있는 데이터 반환
+lag - 파티션 윈도우에서 특정 수만큼 앞선 데이터를 반환
+
+grouping 정렬 카운터/ 정렬 카운터/ 전체 카운터
+grouping sets - 카운터 하고 정렬
+rollup - 정렬하고 카운터 / 정렬하고 카운터
+cube - 정렬하고 카운터/ 정렬하고 카운터/ 전체 정렬 카운터
+
+rownum - 데이터 행에 순번 매겨줌
+
+unbounded preceding - 위에서 부터 누적합
+unbounded following - 아래부터 누적합
+current row - 현재 행 누적
+n preceding - 현재 행에서 위로 n 만큼 누적
+n following - 현재 행에서 아래로 n 만큼 누적
+
+sys_connect_by_path - 루드 노드부터 현재 노드까지의 경로 출력 함수
+connect_by_root - 루트 노드의 주어진 컬럼 값을 반환
+level - 현재의 depth를 반환, 루트 노드는 1이 된다
+connect_by_isleaf - 가장 하위 노드 1 반환, 그 외 0 반환
+
+ntile - n 등분한 후 현재 행에 해당하는 등급을 구하는 함수 
+role - 특정 권한들을 하나의 세트처럼 묶는 것
