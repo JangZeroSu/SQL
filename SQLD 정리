@@ -1,0 +1,62 @@
+as
+- 이름 정의
+- select문 에서만 생략가능
+- as 안쓰고 뛰워쓰기시 "이름"
+
+nologging
+- alter table A nologging;
+- buffer cache 라는 메모리 영역을 생략하고 기록
+- 로그파일 기록 최소화하여 성능 향상
+
+CONCAT('str1', 'str2', ...);
+- 여러 문자열 하나로 합치기
+
+like 에서 escape'_' 
+- _ 문자취급
+
+rownum ~
+- 데이터 추출
+- rownum<x 이면 1~x
+
+NULL
+- 조건에서 is null 이라고 적은게 아니면 조건이 없는것
+- oracle 에선 최댓값
+- sever 에선 최솟값
+
+NVL(컬럼1, X ) 		        (아닐때,null일때)
+ISNULL(컬럼1,NULL일때)
+NVL2(컬럼1,'O','X') 	    (데이터가,아닐때,null일때)
+nullif(컬럼1,컬럼2)       컬럼1=컬럼2 면 null 아니면 컬럼1
+COALESCE(표현식1, 표현식2, ...)       임의의 개수 표현식에서 NULL이 아닌 최초의 표현식
+
+order by 
+- 가장 마지막 연산
+- 기존 테이블에서 연산
+- 성능 저하
+
+merge into (변경할)테이블1
+using 비교테이블2
+  on (조건)
+when matched then
+  update
+  delete
+when not matched then
+  insert()
+  values()
+  
+  count(*) = count(1) 
+  count(*) 조건절(where)이 거짓이면 0
+  
+  연산 순서
+ 산술(+-*/) > 연결(||) > 비교(<>=>) > isnull,like,in > between > not > and > or
+ from > wherre > group > having > select > order
+
+순수관계 연산자
+- select, project, join, divide
+
+순위
+- rank()        12245
+- dense_rank()  12234
+- row_number()  12345
+- ntile(4)      전체를 1~4등으로 나눔
+- partition by  특정 속성별
